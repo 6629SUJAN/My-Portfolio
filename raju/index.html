@@ -8,10 +8,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- EmailJS -->
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <style>
-        /* Existing CSS styles remain unchanged */
+        /* ===== CSS Variables ===== */
         :root {
             --primary: #0ea5e9;
             --primary-light: rgba(14, 165, 233, 0.2);
@@ -28,6 +26,7 @@
             --max-width: 1200px;
         }
 
+        /* ===== Base Styles ===== */
         * {
             margin: 0;
             padding: 0;
@@ -50,6 +49,7 @@
             font-size: 1.1rem;
         }
 
+        /* ===== Background Design ===== */
         body::before {
             content: "";
             position: fixed;
@@ -81,6 +81,7 @@
             mask-image: radial-gradient(circle at center, black 30%, transparent 70%);
         }
 
+        /* ===== Utility Classes ===== */
         .container {
             max-width: var(--max-width);
             margin: 0 auto;
@@ -194,6 +195,7 @@
             transform: translateY(-2px);
         }
 
+        /* ===== Navigation Bar ===== */
         .navbar {
             background: rgba(2, 6, 23, 0.98);
             backdrop-filter: blur(10px);
@@ -295,6 +297,7 @@
             color: var(--primary);
         }
 
+        /* ===== Hero Section ===== */
         #home {
             padding-top: 4rem;
             min-height: calc(100vh - 80px);
@@ -391,6 +394,7 @@
             color: var(--primary);
         }
 
+        /* ===== About Section ===== */
         .about-content {
             display: grid;
             gap: 2rem;
@@ -402,6 +406,7 @@
             line-height: 1.8;
         }
 
+        /* ===== Education Section ===== */
         .timeline {
             position: relative;
             padding-left: 2rem;
@@ -460,6 +465,7 @@
             line-height: 1.8;
         }
 
+        /* ===== Skills Section ===== */
         .skills-container {
             display: flex;
             flex-wrap: wrap;
@@ -481,6 +487,7 @@
             background: rgba(14, 165, 233, 0.3);
         }
 
+        /* ===== Experience Section ===== */
         .volunteer-list {
             display: grid;
             gap: 1.5rem;
@@ -537,6 +544,7 @@
             background: rgba(14, 165, 233, 0.2);
         }
 
+        /* ===== Projects Section ===== */
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -599,6 +607,7 @@
             gap: 1rem;
         }
 
+        /* ===== Contact Section ===== */
         .contact-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -648,6 +657,7 @@
             font-size: 1.2rem;
         }
 
+        /* ===== Footer ===== */
         .footer {
             text-align: center;
             padding: 2rem 0;
@@ -660,6 +670,7 @@
             font-size: 1rem;
         }
 
+        /* ===== Modal Styles ===== */
         .modal {
             display: none;
             position: fixed;
@@ -711,21 +722,7 @@
             font-size: 1.5rem;
         }
 
-        .form-message {
-            text-align: center;
-            margin-top: 1rem;
-            font-size: 1.1rem;
-            color: var(--text-light);
-        }
-
-        .form-message.success {
-            color: #22c55e;
-        }
-
-        .form-message.error {
-            color: #ef4444;
-        }
-
+        /* ===== Mobile Responsive Styles ===== */
         @media (max-width: 992px) {
             .resume-buttons {
                 display: none;
@@ -849,12 +846,17 @@
     </style>
 </head>
 <body>
+    <!-- Background Elements -->
     <div class="bg-circuit"></div>
+
+    <!-- ===== Navigation Bar ===== -->
     <nav class="navbar">
         <a href="#home" class="navbar-brand">
             <img src="1.jpg" alt="Sujan Nepal" class="profile-img">
             <h1>Sujan Nepal</h1>
         </a>
+        
+        <!-- Desktop Navigation -->
         <ul class="nav-links" id="navLinks">
             <li><a href="#home" class="active">Home</a></li>
             <li><a href="#about">About</a></li>
@@ -863,6 +865,8 @@
             <li><a href="#projects">Projects</a></li>
             <li><a href="#experience">Experience</a></li>
             <li><a href="#contact">Contact</a></li>
+            
+            <!-- Mobile Resume Buttons -->
             <div class="mobile-resume-buttons">
                 <a href="Sujan Nepal (1).pdf" class="btn btn-primary" download>
                     <i class="fas fa-download"></i> Download CV
@@ -872,6 +876,8 @@
                 </a>
             </div>
         </ul>
+        
+        <!-- Desktop Resume Buttons -->
         <div class="resume-buttons">
             <a href="Sujan Nepal (1).pdf" class="btn btn-primary" download>
                 <i class="fas fa-download"></i> Download CV
@@ -880,11 +886,16 @@
                 <i class="fas fa-eye"></i> View CV
             </a>
         </div>
+        
+        <!-- Mobile Menu Button -->
         <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu">
             <i class="fas fa-bars"></i>
         </button>
     </nav>
+
+    <!-- ===== Main Content ===== -->
     <main>
+        <!-- Home Section -->
         <section id="home" class="section">
             <div class="container">
                 <div class="hero-content">
@@ -915,6 +926,8 @@
                 </div>
             </div>
         </section>
+        
+        <!-- About Section -->
         <section id="about" class="section">
             <div class="container">
                 <h2 class="section-title">About Me</h2>
@@ -923,6 +936,7 @@
                         <p>I am a passionate Information Technology student currently pursuing my Bachelor's degree at United Academy. With a strong foundation in technology and problem-solving, I'm eager to transition my academic knowledge into real-world applications.</p>
                         <p>My journey in technology began in high school when I built my first website. Since then, I've developed skills in web development, database systems, and software engineering. I approach every project with attention to detail and a commitment to writing clean, efficient code.</p>
                         <p>When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or mentoring fellow students in programming fundamentals.</p>
+                        
                         <h3 class="text-primary">Languages</h3>
                         <div class="skills-container">
                             <span class="skill">English (Fluent)</span>
@@ -933,6 +947,8 @@
                 </div>
             </div>
         </section>
+        
+        <!-- Education Section -->
         <section id="education" class="section">
             <div class="container">
                 <h2 class="section-title">Education</h2>
@@ -944,6 +960,7 @@
                             <p class="text-light">United Academy, Faculty of Science</p>
                             <p>Focusing on software development, database systems, and network security. Key coursework includes Data Structures, Algorithms, Web Development, and Computer Networks.</p>
                         </div>
+                        
                         <div class="timeline-item">
                             <h3>Higher Secondary Education</h3>
                             <span class="date">2018 - 2020</span>
@@ -954,6 +971,8 @@
                 </div>
             </div>
         </section>
+        
+        <!-- Skills Section -->
         <section id="skills" class="section">
             <div class="container">
                 <h2 class="section-title">Skills</h2>
@@ -971,6 +990,7 @@
                         <span class="skill">Database Design</span>
                         <span class="skill">RESTful APIs</span>
                     </div>
+                    
                     <h3 class="text-primary" style="margin: 2rem 0 1.5rem;">Professional Skills</h3>
                     <div class="skills-container">
                         <span class="skill">Problem Solving</span>
@@ -982,6 +1002,8 @@
                 </div>
             </div>
         </section>
+        
+        <!-- Projects Section -->
         <section id="projects" class="section">
             <div class="container">
                 <h2 class="section-title">Projects</h2>
@@ -998,9 +1020,7 @@
                                     <span class="tech-tag">Console Application</span>
                                 </div>
                                 <div class="project-links">
-                                    <a href="https://github.com/6629SUJAN/e
-
-lection-system" class="btn btn-outline" style="padding: 0.5rem 1rem;">
+                                    <a href="https://github.com/6629SUJAN/election-system" class="btn btn-outline" style="padding: 0.5rem 1rem;">
                                         <i class="fab fa-github"></i> Code
                                     </a>
                                 </div>
@@ -1010,6 +1030,8 @@ lection-system" class="btn btn-outline" style="padding: 0.5rem 1rem;">
                 </div>
             </div>
         </section>
+        
+        <!-- Experience Section -->
         <section id="experience" class="section">
             <div class="container">
                 <h2 class="section-title">Experience</h2>
@@ -1046,6 +1068,8 @@ lection-system" class="btn btn-outline" style="padding: 0.5rem 1rem;">
                 </div>
             </div>
         </section>
+        
+        <!-- Contact Section -->
         <section id="contact" class="section">
             <div class="container">
                 <h2 class="section-title">Get In Touch</h2>
@@ -1076,25 +1100,28 @@ lection-system" class="btn btn-outline" style="padding: 0.5rem 1rem;">
                             <p class="text-light" style="margin-top: 0.5rem; font-size: 0.9rem;">Nepal</p>
                         </div>
                     </div>
-                    <form id="contactForm" class="contact-form" style="margin-top: 3rem;">
+                    
+                    <!-- Contact Form -->
+                    <form class="contact-form" style="margin-top: 3rem;">
                         <h3 class="text-primary" style="margin-bottom: 1.5rem; text-align: center;">Send Me a Message</h3>
                         <div style="display: grid; gap: 1.5rem;">
                             <div style="display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
-                                <input type="text" name="name" placeholder="Your Name" required style="padding: 0.75rem; border-radius: var(--border-radius); background: var(--dark); border: 1px solid rgba(255, 255, 255, 0.1); color: var(--text); font-size: 1.1rem;">
-                                <input type="email" name="email" placeholder="Your Email" required style="padding: 0.75rem; border-radius: var(--border-radius); background: var(--dark); border: 1px solid rgba(255, 255, 255, 0.1); color: var(--text); font-size: 1.1rem;">
+                                <input type="text" placeholder="Your Name" style="padding: 0.75rem; border-radius: var(--border-radius); background: var(--dark); border: 1px solid rgba(255, 255, 255, 0.1); color: var(--text); font-size: 1.1rem;">
+                                <input type="email" placeholder="Your Email" style="padding: 0.75rem; border-radius: var(--border-radius); background: var(--dark); border: 1px solid rgba(255, 255, 255, 0.1); color: var(--text); font-size: 1.1rem;">
                             </div>
-                            <input type="text" name="subject" placeholder="Subject" required style="padding: 0.75rem; border-radius: var(--border-radius); background: var(--dark); border: 1px solid rgba(255, 255, 255, 0.1); color: var(--text); font-size: 1.1rem;">
-                            <textarea name="message" placeholder="Your Message" rows="5" required style="padding: 0.75rem; border-radius: var(--border-radius); background: var(--dark); border: 1px solid rgba(255, 255, 255, 0.1); color: var(--text); font-size: 1.1rem;"></textarea>
+                            <input type="text" placeholder="Subject" style="padding: 0.75rem; border-radius: var(--border-radius); background: var(--dark); border: 1px solid rgba(255, 255, 255, 0.1); color: var(--text); font-size: 1.1rem;">
+                            <textarea placeholder="Your Message" rows="5" style="padding: 0.75rem; border-radius: var(--border-radius); background: var(--dark); border: 1px solid rgba(255, 255, 255, 0.1); color: var(--text); font-size: 1.1rem;"></textarea>
                             <button type="submit" class="btn btn-primary" style="justify-content: center;">
                                 <i class="fas fa-paper-plane"></i> Send Message
                             </button>
                         </div>
-                        <div id="formMessage" class="form-message"></div>
                     </form>
                 </div>
             </div>
         </section>
     </main>
+
+    <!-- Certificate Modal -->
     <div class="modal" id="certificateModal">
         <div class="modal-content">
             <span class="close-modal" onclick="closeCertificateModal()">×</span>
@@ -1102,6 +1129,8 @@ lection-system" class="btn btn-outline" style="padding: 0.5rem 1rem;">
             <img src="" alt="Certificate" class="modal-image" id="modalImage">
         </div>
     </div>
+
+    <!-- ===== Footer ===== -->
     <footer class="footer">
         <div class="container">
             <p>© <span id="year"></span> Sujan Nepal. All rights reserved.</p>
@@ -1121,20 +1150,15 @@ lection-system" class="btn btn-outline" style="padding: 0.5rem 1rem;">
             </div>
         </div>
     </footer>
-    <script>
-        // Initialize EmailJS with your public key
-        (function(){
-            emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your EmailJS public key
-        })();
 
+    <!-- ===== JavaScript ===== -->
+    <script>
         document.addEventListener('DOMContentLoaded', function() {
             const mobileMenuBtn = document.getElementById('mobileMenuBtn');
             const navLinks = document.getElementById('navLinks');
             const navItems = document.querySelectorAll('.nav-links a');
             const sections = document.querySelectorAll('section');
             const navbar = document.querySelector('.navbar');
-            const contactForm = document.getElementById('contactForm');
-            const formMessage = document.getElementById('formMessage');
             
             // Set current year in footer
             document.getElementById('year').textContent = new Date().getFullYear();
@@ -1147,6 +1171,7 @@ lection-system" class="btn btn-outline" style="padding: 0.5rem 1rem;">
                     navbar.classList.remove('scrolled');
                 }
                 
+                // Highlight active section in navbar
                 const scrollPosition = window.scrollY + 100;
                 
                 sections.forEach(section => {
@@ -1168,6 +1193,8 @@ lection-system" class="btn btn-outline" style="padding: 0.5rem 1rem;">
             // Toggle mobile menu
             mobileMenuBtn.addEventListener('click', function() {
                 navLinks.classList.toggle('active');
+                
+                // Change icon based on menu state
                 const icon = this.querySelector('i');
                 if (navLinks.classList.contains('active')) {
                     icon.classList.remove('fa-bars');
@@ -1183,13 +1210,19 @@ lection-system" class="btn btn-outline" style="padding: 0.5rem 1rem;">
                 item.addEventListener('click', function(e) {
                     if (this.getAttribute('href').startsWith('#')) {
                         e.preventDefault();
+                        
+                        // Close mobile menu if open
                         if (window.innerWidth <= 768) {
                             navLinks.classList.remove('active');
                             mobileMenuBtn.querySelector('i').classList.remove('fa-times');
                             mobileMenuBtn.querySelector('i').classList.add('fa-bars');
                         }
+                        
+                        // Set active link
                         navItems.forEach(link => link.classList.remove('active'));
                         this.classList.add('active');
+                        
+                        // Smooth scroll to section
                         const targetElement = document.querySelector(this.getAttribute('href'));
                         if (targetElement) {
                             window.scrollTo({
@@ -1207,53 +1240,23 @@ lection-system" class="btn btn-outline" style="padding: 0.5rem 1rem;">
                 if (targetSection) {
                     sections.forEach(section => section.classList.remove('active'));
                     targetSection.classList.add('active');
+                    
                     navItems.forEach(link => {
                         link.classList.remove('active');
                         if (link.getAttribute('href') === window.location.hash) {
                             link.classList.add('active');
                         }
                     });
+                    
                     window.scrollTo({
                         top: targetSection.offsetTop - 80,
                         behavior: 'smooth'
                     });
                 }
             }
-
-            // Contact form submission
-            contactForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                
-                // Disable submit button to prevent multiple submissions
-                const submitButton = contactForm.querySelector('button[type="submit"]');
-                submitButton.disabled = true;
-                submitButton.style.opacity = '0.6';
-                
-                // Send email using EmailJS
-                emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
-                    .then(function() {
-                        formMessage.textContent = 'Message sent successfully!';
-                        formMessage.classList.add('success');
-                        contactForm.reset();
-                        setTimeout(() => {
-                            formMessage.textContent = '';
-                            formMessage.classList.remove('success');
-                        }, 5000);
-                    }, function(error) {
-                        formMessage.textContent = 'Failed to send message. Please try again later.';
-                        formMessage.classList.add('error');
-                        setTimeout(() => {
-                            formMessage.textContent = '';
-                            formMessage.classList.remove('error');
-                        }, 5000);
-                    })
-                    .finally(() => {
-                        submitButton.disabled = false;
-                        submitButton.style.opacity = '1';
-                    });
-            });
         });
 
+        // Contact Functions
         function sendEmail() {
             window.location.href = 'mailto:sujann045@gmail.com';
         }
@@ -1267,6 +1270,7 @@ lection-system" class="btn btn-outline" style="padding: 0.5rem 1rem;">
             window.open(`https://www.google.com/maps/search/?api=1&query=${address}`, '_blank');
         }
 
+        // Certificate Modal Functions
         function openCertificateModal(title, imageSrc) {
             const modal = document.getElementById('certificateModal');
             const modalTitle = document.getElementById('modalTitle');
@@ -1285,6 +1289,7 @@ lection-system" class="btn btn-outline" style="padding: 0.5rem 1rem;">
             document.body.style.overflow = 'auto';
         }
 
+        // Close modal when clicking outside the content
         window.addEventListener('click', function(event) {
             const modal = document.getElementById('certificateModal');
             if (event.target === modal) {
